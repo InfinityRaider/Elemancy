@@ -9,7 +9,7 @@ import net.minecraft.world.World;
 
 public final class SpellFear extends SpellProjectile {
     public SpellFear() throws DuplicateSpellException {
-        super(Element.DEATH, Element.DEATH, Names.Spells.FEAR);
+        super(Element.AIR, Element.DEATH, Names.Spells.FEAR);
     }
 
     @Override

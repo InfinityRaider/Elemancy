@@ -23,5 +23,7 @@ public class ConfigurationHandler {
     private static void loadConfiguration() {
         //debug mode
         debug = config.getBoolean("debug",CATEGORY_DEBUG,false,"Set to true if you wish to enable debug mode");
+
+        if(config.hasChanged()) {config.save();}
     }
 }
