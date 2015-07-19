@@ -11,7 +11,7 @@ public class Reference {
     public static final String VERSION = "1.7.10-" + MOD_VERSION;
 
     public static final String AUTHOR = "InfinityRaider";
-    public static final String CLIENT_PROXY_CLASS = "com.InfinityRaider.maneuvergear.proxy.ClientProxy";
-    public static final String SERVER_PROXY_CLASS = "com.InfinityRaider.maneuvergear.proxy.ServerProxy";
-    public static final String GUI_FACTORY_CLASS = "com.InfinityRaider.maneuvergear.gui.GuiFactory";
+    public static final String CLIENT_PROXY_CLASS = "com.InfinityRaider.elemancy.proxy.ClientProxy";
+    public static final String SERVER_PROXY_CLASS = "com.InfinityRaider.elemancy.proxy.ServerProxy";
+    public static final String GUI_FACTORY_CLASS = "com.InfinityRaider.elemancy.gui.GuiFactory";
 }

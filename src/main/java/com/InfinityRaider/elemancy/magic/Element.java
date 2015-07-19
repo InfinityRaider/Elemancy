@@ -4,18 +4,26 @@ import com.InfinityRaider.elemancy.reference.Names;
 import net.minecraft.nbt.NBTTagCompound;
 
 public enum Element {
-    FIRE,
-    WATER(FIRE),
-    EARTH,
-    AIR(EARTH),
-    LIFE,
-    DEATH(LIFE);
+    FIRE(255, 93, 0),
+    WATER(0, 159, 255, FIRE),
+    EARTH(116, 62, 0),
+    AIR(255, 255, 0, EARTH),
+    LIFE(29, 132, 0),
+    DEATH(80, 0, 114, LIFE);
 
-    Element() {}
-
+    int red;
+    int blue;
+    int green;
     private Element opposite;
 
-    Element(Element opposite) {
+    Element(int red, int green, int blue) {
+        this.red = red;
+        this.green = green;
+        this.blue = blue;
+    }
+
+    Element(int red, int green, int blue, Element opposite) {
+        this(red, green, blue);
         this.opposite = opposite;
         opposite.opposite = this;
     }
@@ -47,6 +55,14 @@ public enum Element {
 
     private static boolean isValidTag(NBTTagCompound tag) {
         return (tag != null) && (tag.hasKey(Names.NBT.ELEMENT)) && (tag.hasKey(Names.NBT.LEVEL));
+    }
+
+    public float[] getColorModifier() {
+        float[] colors = new float[3];
+        colors[0] = ((float)this.red)/(255.00F);
+        colors[1] = ((float)this.green)/(255.00F);
+        colors[2] = ((float)this.blue)/(255.00F);
+        return colors;
     }
 
 }

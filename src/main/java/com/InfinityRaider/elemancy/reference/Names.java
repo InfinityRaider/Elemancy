@@ -149,5 +149,8 @@ public class Names {
         public static final String LEVEL = "ele_Level";
         public static final String ELEMENT = "ele_Element";
         public static final String MAGIC_CAPABILITIES = "ele_Magic";
+        public static final String X = "ele_X";
+        public static final String Y = "ele_Y";
+        public static final String Z = "ele_Z";
     }
 }
