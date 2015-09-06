@@ -65,4 +65,10 @@ public enum Element {
         return colors;
     }
 
+    public static Element getElement(int ordinal) {
+        ordinal = ordinal<0?0:ordinal;
+        ordinal = ordinal%Element.values().length;
+        return Element.values()[ordinal];
+    }
+
 }

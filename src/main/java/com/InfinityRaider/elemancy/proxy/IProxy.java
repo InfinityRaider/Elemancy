@@ -1,9 +1,22 @@
 package com.InfinityRaider.elemancy.proxy;
 
+import net.minecraft.entity.Entity;
+import net.minecraft.world.World;
+
 public interface IProxy {
-    public void registerEventHandlers();
+    void registerEventHandlers();
 
-    public void registerRenderers();
+    void registerRenderers();
 
-    public void registerKeyBindings();
+    void registerKeyBindings();
+
+    World getClientWorld();
+
+    World getWorldByDimensionId(int dimension);
+
+    Entity getEntityById(int id);
+
+    Entity getEntityById(int dimension, int id);
+
+    Entity getEntityById(World world, int id);
 }

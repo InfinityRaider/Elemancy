@@ -25,11 +25,10 @@ public class ItemMagicWeapon extends ItemElemancy {
     private static final int MAX_META = 5;
 
     public ItemMagicWeapon(String name, Shape shapeNormal, Shape shapeSpecial) {
-        super();
+        super(name);
         this.shapeNormal = shapeNormal;
         this.shapeSpecial = shapeSpecial;
         this.setMaxStackSize(1);
-        RegisterHelper.registerItem(this, name);
     }
 
     private PlayerMagicProperty getPlayerMagic(EntityPlayer player) {
